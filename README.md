@@ -24,7 +24,7 @@ Only the 2.5D CT blocks whose central slices contain **real annotation** are inc
 
 ## Training
 ![[Training phase]([training phase.png](https://github.com/ZhangXiaotong015/GATSegDiff/blob/main/training%20phase.png))](https://github.com/ZhangXiaotong015/GATSegDiff/blob/main/training%20phase.png)
-Submit a training task to Slurm:
+**Submit a training task to Slurm:**
 
 ```
 sbatch run_Foldx_LiVS.sh
@@ -32,13 +32,15 @@ sbatch run_Foldx_LiVS.sh
 
 ## Inference
 ![[Inference phase]([inference phase.png](https://github.com/ZhangXiaotong015/GATSegDiff/blob/main/inference%20phase.png))](https://github.com/ZhangXiaotong015/GATSegDiff/blob/main/inference%20phase.png)
-Submit inference tasks to Slurm:
+**Submit inference tasks to Slurm:**
 
 ```
 bash run_Infer_Foldx_LiVS.sh
 ```
---inFold_subset: Splits the test cases evenly into num_test_cases / inFold_subset parts.
+**--inFold_subset**: Splits the test cases evenly into num_test_cases / inFold_subset parts.
 Each part is processed on an individual GPU.
 
---seed: Seed used for inference. 
+**--seed**: Seed used for inference. 
 (For the LiVS dataset with discontinuous annotations, we recommend ensembling inferences with five different seeds, as described in our paper.)
+
+## Post-processing
