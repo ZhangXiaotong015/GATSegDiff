@@ -1,6 +1,17 @@
 # GATSegDiff
 The official implementation of 'Continuous and complete liver vessel segmentation with graph-attention guided diffusion'.
 
+## Data preparation
+```
+from data_processing import sub_volume_crop_LiVS, save_graph3D_25DTrainSet_LiVS
+
+# Crop and resize 2D CT images to (256,256)
+sub_volume_crop_LiVS()
+
+# Create a local graph for each 2.5D CT block with three consecutive CT slices
+save_graph3D_25DTrainSet_LiVS()
+```
+
 ## Training
 ![[Training phase]([training phase.png](https://github.com/ZhangXiaotong015/GATSegDiff/blob/main/training%20phase.png))](https://github.com/ZhangXiaotong015/GATSegDiff/blob/main/training%20phase.png)
 Submit a training task to Slurm:
