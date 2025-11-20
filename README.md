@@ -47,3 +47,15 @@ Each part is processed on an individual GPU.
 (For the LiVS dataset with discontinuous annotations, we recommend ensembling inferences with five different seeds, as described in our paper.)
 
 ## Post-processing
+```
+from data_processing import prediction_transpose, ensemble_inference_LiVS
+
+# Transpose segmentation masks
+prediction_transpose()
+
+# Sample ensembling for segmentation using five different seeds.
+ensemble_inference_LiVS()
+
+# Optional noise cancelling.
+
+```
