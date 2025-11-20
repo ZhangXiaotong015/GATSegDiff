@@ -11,6 +11,7 @@ sub_volume_crop_LiVS()
 # Create a local graph for each 2.5D CT block with three consecutive CT slices
 save_graph3D_25DTrainSet_LiVS()
 ```
+The LiVS dataset can be accessed at: https://ieee-dataport.org/documents/liver-vessel-segmentation.
 
 ## Training
 ![[Training phase]([training phase.png](https://github.com/ZhangXiaotong015/GATSegDiff/blob/main/training%20phase.png))](https://github.com/ZhangXiaotong015/GATSegDiff/blob/main/training%20phase.png)
