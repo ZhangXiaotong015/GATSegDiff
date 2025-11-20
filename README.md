@@ -13,6 +13,11 @@ save_graph3D_25DTrainSet_LiVS()
 ```
 The LiVS dataset can be accessed at: https://ieee-dataport.org/documents/liver-vessel-segmentation.
 
+The statistic for the number of annotated slices in LiVS dataset can be found in 'data processing/LiVS_overview.xlsx'.
+In our study, we only use cases with at least 30 annotated slices.
+
+The liver vessel masks interpolated by ITKSNAP are released in 'data processing/'
+
 ## Training
 ![[Training phase]([training phase.png](https://github.com/ZhangXiaotong015/GATSegDiff/blob/main/training%20phase.png))](https://github.com/ZhangXiaotong015/GATSegDiff/blob/main/training%20phase.png)
 Submit a training task to Slurm:
