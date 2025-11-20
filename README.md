@@ -25,7 +25,7 @@ The interpolated masks are required when creating the local graph with contextua
 **NOTICE!** The interpolated liver vessel masks in the LiVS dataset are used **only** for local graph creation.
 Only the 2.5D CT blocks whose central slices contain **real annotation** are included in the training.
 
-*To contribute to future development in the field of liver vessel segmentation, we also reannotated 30 cases in the LiVS dataset to produce continuous and complete vessel trees.
+**To contribute to future development in the field of liver vessel segmentation, we also reannotated 30 cases in the LiVS dataset to produce continuous and complete vessel trees.
 The reannotated masks can be found in ```data processing/Exp_vessel_mask_reannotate_nii```.*
 
 ## Training
