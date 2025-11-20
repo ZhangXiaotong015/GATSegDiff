@@ -16,3 +16,5 @@ Submit inference tasks to Slurm:
 ```
 bash run_Infer_Foldx_LiVS.sh
 ```
+--inFold_subset: Splits the test cases evenly into num_test_cases / inFold_subset parts.
+Each part is processed on an individual GPU.
