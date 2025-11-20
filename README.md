@@ -55,7 +55,9 @@ prediction_transpose()
 
 # Sample ensembling for segmentation using five different seeds.
 ensemble_inference_LiVS()
+```
 
-# Optional noise cancelling.
-
+**Optional noise cancelling**
+```
+bash noiseCancel_Foldx_LiVS.sh
 ```
