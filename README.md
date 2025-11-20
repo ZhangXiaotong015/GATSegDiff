@@ -11,13 +11,16 @@ sub_volume_crop_LiVS()
 # Create a local graph for each 2.5D CT block with three consecutive CT slices
 save_graph3D_25DTrainSet_LiVS()
 ```
-The LiVS dataset can be accessed at: https://ieee-dataport.org/documents/liver-vessel-segmentation.
+The LiVS dataset can be accessed at: ```https://ieee-dataport.org/documents/liver-vessel-segmentation```.
 
-The statistic for the number of annotated slices in LiVS dataset can be found in 'data processing/LiVS_overview.xlsx'.
-In our study, we only use cases with at least 30 annotated slices.
+The statistic for the number of annotated slices in LiVS dataset can be found in ```data processing/LiVS_overview.xlsx```.
+In our study, we only use cases with at least **30** annotated slices.
 
-The liver vessel masks interpolated using ITKSNAP are provided in 'data processing/Exp_interp_vessel_mask_nii'.
+The liver vessel masks of the LiVS dataset **interpolated** using ITKSNAP are provided in ```data processing/Exp_interp_vessel_mask_nii```.
 The interpolated masks are required when creating the local graph with contextual information.
+
+**NOTICE!** The interpolated liver vessel masks in the LiVS dataset are used **only** for local graph creation.
+Only the 2.5D CT blocks whose central slices contain **real annotation** are included in the training.
 
 ## Training
 ![[Training phase]([training phase.png](https://github.com/ZhangXiaotong015/GATSegDiff/blob/main/training%20phase.png))](https://github.com/ZhangXiaotong015/GATSegDiff/blob/main/training%20phase.png)
