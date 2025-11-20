@@ -16,7 +16,8 @@ The LiVS dataset can be accessed at: https://ieee-dataport.org/documents/liver-v
 The statistic for the number of annotated slices in LiVS dataset can be found in 'data processing/LiVS_overview.xlsx'.
 In our study, we only use cases with at least 30 annotated slices.
 
-The liver vessel masks interpolated by ITKSNAP are released in 'data processing/'
+The liver vessel masks interpolated using ITKSNAP are provided in 'data processing/Exp_interp_vessel_mask_nii'.
+The interpolated masks are required when creating the local graph with contextual information.
 
 ## Training
 ![[Training phase]([training phase.png](https://github.com/ZhangXiaotong015/GATSegDiff/blob/main/training%20phase.png))](https://github.com/ZhangXiaotong015/GATSegDiff/blob/main/training%20phase.png)
