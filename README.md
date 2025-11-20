@@ -3,10 +3,13 @@ The official implementation of 'Continuous and complete liver vessel segmentatio
 
 ## Data preparation
 ```
-from data_processing import sub_volume_crop_LiVS, save_graph3D_25DTrainSet_LiVS
+from data_processing import sub_volume_crop_LiVS, crop25d_testset_LiVS, save_graph3D_25DTrainSet_LiVS
 
-# Crop and resize 2D CT images to (256,256)
+# Sample 2.5D CT blocks from CT volumes for training
 sub_volume_crop_LiVS()
+
+# Sample 2.5D CT blocks from CT volumes for testing
+crop25d_testset_LiVS()
 
 # Create a local graph for each 2.5D CT block with three consecutive CT slices
 save_graph3D_25DTrainSet_LiVS()
