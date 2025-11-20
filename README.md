@@ -46,6 +46,15 @@ Each part is processed on an individual GPU.
 **--seed**: Seed used for inference. 
 (For the LiVS dataset with discontinuous annotations, we recommend ensembling inferences with five different seeds, as described in our paper.)
 
+**Optional inference acceleration using DPMSolver++:**
+
+DPM-Solver++ can be enabled by setting the following three parameters in ```run_Infer_Foldx_LiVS.sh```.
+```
+--dpm_solver True \
+--num_ensemble 3 \
+--diffusion_steps 30
+```
+
 ## Post-processing
 ```
 from data_processing import prediction_transpose, ensemble_inference_LiVS
@@ -57,7 +66,7 @@ prediction_transpose()
 ensemble_inference_LiVS()
 ```
 
-**Optional noise cancelling**
+**Optional noise cancelling:**
 ```
 bash noiseCancel_Foldx_LiVS.sh
 ```
