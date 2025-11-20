@@ -70,3 +70,18 @@ ensemble_inference_LiVS()
 ```
 bash noiseCancel_Foldx_LiVS.sh
 ```
+
+## Citation
+If you use this work, please cite:
+```
+@article{ZHANG2025114686,
+title = {Continuous and complete liver vessel segmentation with graph-attention guided diffusion},
+journal = {Knowledge-Based Systems},
+volume = {331},
+pages = {114686},
+year = {2025},
+issn = {0950-7051},
+doi = {https://doi.org/10.1016/j.knosys.2025.114686},
+url = {https://www.sciencedirect.com/science/article/pii/S0950705125017253},
+author = {Xiaotong Zhang and Alexander Broersen and Gonnie {Van Erp} and Silvia Pintea and Jouke Dijkstra},
+```
