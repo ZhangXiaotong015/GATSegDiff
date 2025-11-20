@@ -18,3 +18,6 @@ bash run_Infer_Foldx_LiVS.sh
 ```
 --inFold_subset: Splits the test cases evenly into num_test_cases / inFold_subset parts.
 Each part is processed on an individual GPU.
+
+--seed: Seed used for inference. 
+(For the LiVS dataset with discontinuous annotations, we recommend ensembling inferences with five different seeds, as described in our paper.)
