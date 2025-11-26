@@ -85,7 +85,7 @@ bash run.sh
 ```
 For quick experimentation, we have released the model weights trained on the [reannotated subset](data%20processing/Exp_vessel_mask_reannotate_nii/) of the LiVS dataset.
 
-You can find the model weights at [this link](https://drive.google.com/drive/folders/1V9NtZingw9XQmFGbGGFOE59vtF6iDeck?usp=drive_link) and download them to [Dockerfile/GATSegDiff/model](Dockerfile/GATSegDiff/model).
+You can find the model weights at [this link](https://drive.google.com/drive/folders/1V9NtZingw9XQmFGbGGFOE59vtF6iDeck?usp=drive_link) and download them to ```Dockerfile/GATSegDiff/model```.
 
 ## Citation
 If you use this work, please cite:
