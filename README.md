@@ -14,19 +14,20 @@ crop25d_testset_LiVS()
 # Create a local graph for each 2.5D CT block with three consecutive CT slices
 save_graph3D_25DTrainSet_LiVS()
 ```
-The LiVS dataset can be accessed at: ```https://ieee-dataport.org/documents/liver-vessel-segmentation```.
+The LiVS dataset can be accessed at: [LiVS](https://ieee-dataport.org/documents/liver-vessel-segmentation)
+.
 
-The statistic for the number of annotated slices in LiVS dataset can be found in ```data processing/LiVS_overview.xlsx```.
+The statistic for the number of annotated slices in LiVS dataset can be found in [LiVS_overview.xlsx](data%20processing/LiVS_overview.xlsx).
 In our study, we only use cases with at least **30** annotated slices.
 
-The liver vessel masks of the LiVS dataset **interpolated** using ITKSNAP are provided in ```data processing/Exp_interp_vessel_mask_nii```.
+The liver vessel masks of the LiVS dataset **interpolated** using ITKSNAP are provided in [Exp_interp_vessel_mask_nii](data%20processing/Exp_interp_vessel_mask_nii).
 The interpolated masks are required when creating the local graph with contextual information.
 
 **NOTICE!** The interpolated liver vessel masks in the LiVS dataset are used **only** for local graph creation.
 Only the 2.5D CT blocks whose central slices contain **real annotation** are included in the training.
 
 **To contribute to future development in the field of liver vessel segmentation, we also reannotated 30 cases in the LiVS dataset to produce continuous and complete vessel trees.
-The reannotated masks can be found in ```data processing/Exp_vessel_mask_reannotate_nii```.*
+The reannotated masks can be found in [Exp_vessel_mask_reannotate_nii](data%20processing/Exp_vessel_mask_reannotate_nii).*
 
 ## Training
 ![[Training phase]([training phase.png](https://github.com/ZhangXiaotong015/GATSegDiff/blob/main/training%20phase.png))](https://github.com/ZhangXiaotong015/GATSegDiff/blob/main/training%20phase.png)
@@ -43,7 +44,7 @@ sbatch run_Foldx_LiVS.sh
 ```
 bash run_Infer_Foldx_LiVS.sh
 ```
-**--inFold_subset**: Splits the test cases evenly into num_test_cases / inFold_subset parts.
+**--inFold_subset**: Splits the test cases evenly into ```num_test_cases / inFold_subset``` parts.
 Each part is processed on an individual GPU.
 
 **--seed**: Seed used for inference. 
