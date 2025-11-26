@@ -1,5 +1,5 @@
 # GATSegDiff
-The official implementation of **Continuous and complete liver vessel segmentation with graph-attention guided diffusion** published in *Knowledge-Based Systems*.
+The official implementation of [Continuous and complete liver vessel segmentation with graph-attention guided diffusion](https://www.sciencedirect.com/science/article/pii/S0950705125017253) published in *Knowledge-Based Systems*.
 
 ## Data preparation
 ```
