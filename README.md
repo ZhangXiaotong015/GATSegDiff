@@ -75,13 +75,14 @@ bash noiseCancel_Foldx_LiVS.sh
 ```
 
 ## Dockerfile
-You can simply build the inference image in a WSL2 environment using the Dockerfile in [Dockerfile/GATSegDiff](https://github.com/ZhangXiaotong015/GATSegDiff/Dockerfile/GATSegDiff).
+You can simply build the inference image in a WSL2 environment using the Dockerfile in [Dockerfile/GATSegDiff](Dockerfile/GATSegDiff/)
+.
 ```
 cd Dockerfile/GATSegDiff
 docker build -t image_name:tag .
 bash run.sh
 ```
-For quick experimentation, we have released the model weights trained on the reannotated subset ```data processing/Exp_vessel_mask_reannotate_nii``` of the LiVS dataset.
+For quick experimentation, we have released the model weights trained on the [reannotated subset](data%20processing/Exp_vessel_mask_reannotate_nii/) of the LiVS dataset.
 
 You can find the model weights at [this link](https://drive.google.com/drive/folders/1V9NtZingw9XQmFGbGGFOE59vtF6iDeck?usp=drive_link) and download them to ```Dockerfile/GATSegDiff/model```.
 
