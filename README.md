@@ -75,7 +75,7 @@ bash noiseCancel_Foldx_LiVS.sh
 ```
 
 ## Dockerfile
-You can simply build the inference image in a WSL2 environment using the Dockerfile in ```Dockerfile/GATSegDiff```.
+You can simply build the inference image in a WSL2 environment using the Dockerfile in [Dockerfile/GATSegDiff](https://github.com/ZhangXiaotong015/GATSegDiff/Dockerfile/GATSegDiff).
 ```
 cd Dockerfile/GATSegDiff
 docker build -t image_name:tag .
