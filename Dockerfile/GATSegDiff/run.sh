@@ -5,9 +5,9 @@ mkdir -p "$OUTPUT_DIR"
 mkdir -p "$data_test_CT_25D"
 docker run --rm --gpus "device=0" \
            --tmpfs /dev/shm:rw,noexec,nosuid,size=2g \
-    -v "$OUTPUT_DIR":/output \
-    -v /mnt/e/WSL/TestData/LiverVesselSeg/Pre-ablation/Portal:/data_test_CT \
-    -v "$data_test_CT_25D":/data_test_CT_25D \
+    --mount type=bind,src="$OUTPUT_DIR",dst=/output \
+    --mount type=bind,src=/mnt/e/WSL/TestData/LiverVesselSeg/Pre-ablation/Portal,dst=/data_test_CT,readonly \
+    --mount type=bind,src="$data_test_CT_25D",dst=/data_test_CT_25D \
     -e MODEL_PATH=/app/model/LiVS_reannotated_subset_F0_model160000.pt \
     gat_seg_diff:latest \
     --out_dir /output \
@@ -26,9 +26,9 @@ docker run --rm --gpus "device=0" \
 # mkdir -p "$OUTPUT_DIR"
 # mkdir -p "$data_test_CT_25D"
 # docker run -it --rm --gpus "device=0" --tmpfs /dev/shm:rw,noexec,nosuid,size=2g \
-#     -v "$OUTPUT_DIR":/output \
-#     -v /mnt/e/WSL/TestData/LiverVesselSeg/Pre-ablation/Portal:/data_test_CT \
-#     -v "$data_test_CT_25D":/data_test_CT_25D \
+    # --mount type=bind,src="$OUTPUT_DIR",dst=/output \
+    # --mount type=bind,src=/mnt/e/WSL/TestData/LiverVesselSeg/Pre-ablation/Portal,dst=/data_test_CT,readonly \
+    # --mount type=bind,src="$data_test_CT_25D",dst=/data_test_CT_25D \
 #     -e MODEL_PATH=/app/model/LiVS_reannotated_subset_F0_model160000.pt \
 #     gat_seg_diff:latest \
 #     bash
