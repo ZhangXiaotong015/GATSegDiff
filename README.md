@@ -16,6 +16,8 @@ You can find the model weights at [this link](https://drive.google.com/drive/fol
 
 The data split file for the reannotated subset of the LiVS dataset can also be found at [this link](https://drive.google.com/drive/folders/1V9NtZingw9XQmFGbGGFOE59vtF6iDeck?usp=drive_link).
 
+For the complete workflow, the input is a liver-masked CT volume cropped to the liver region with a size of ```(256,256,slices)```, while the output is a binary mask of the liver vessels.
+
 **NOTICE!** We do not recommend using the released model weights to directly evaluate on the original LiVS dataset, because the released weights were trained on the reannotated LiVS subset, whose annotation style differs from that of the original LiVS dataset.
 
 ## Data preparation
