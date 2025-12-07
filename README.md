@@ -1,6 +1,22 @@
 # GATSegDiff
 The official implementation of [Continuous and complete liver vessel segmentation with graph-attention guided diffusion](https://www.sciencedirect.com/science/article/pii/S0950705125017253) published in *Knowledge-Based Systems*.
 
+## Dockerfile
+You can simply build the inference image in a WSL2 environment using the Dockerfile in [Dockerfile/GATSegDiff](Dockerfile/GATSegDiff/)
+.
+```
+cd Dockerfile/GATSegDiff
+docker build -t gat_seg_diff:latest .
+bash run.sh
+```
+For quick experimentation, we have released the model weights trained on the [reannotated subset](data%20processing/Exp_vessel_mask_reannotate_nii/) of the LiVS dataset.
+
+You can find the model weights at [this link](https://drive.google.com/drive/folders/1V9NtZingw9XQmFGbGGFOE59vtF6iDeck?usp=drive_link) and download them to ```Dockerfile/GATSegDiff/model```.
+
+The data split file for the reannotated subset of the LiVS dataset can also be found at [this link](https://drive.google.com/drive/folders/1V9NtZingw9XQmFGbGGFOE59vtF6iDeck?usp=drive_link).
+
+**NOTICE!** We do not recommend using the released model weights to directly evaluate on the original LiVS dataset, because the released weights were trained on the reannotated LiVS subset, whose annotation style differs from that of the original LiVS dataset.
+
 ## Data preparation
 ```
 from data_processing import sub_volume_crop_LiVS, crop25d_testset_LiVS, save_graph3D_25DTrainSet_LiVS
@@ -74,22 +90,6 @@ ensemble_inference_LiVS()
 ```
 bash noiseCancel_Foldx_LiVS.sh
 ```
-
-## Dockerfile
-You can simply build the inference image in a WSL2 environment using the Dockerfile in [Dockerfile/GATSegDiff](Dockerfile/GATSegDiff/)
-.
-```
-cd Dockerfile/GATSegDiff
-docker build -t image_name:tag .
-bash run.sh
-```
-For quick experimentation, we have released the model weights trained on the [reannotated subset](data%20processing/Exp_vessel_mask_reannotate_nii/) of the LiVS dataset.
-
-You can find the model weights at [this link](https://drive.google.com/drive/folders/1V9NtZingw9XQmFGbGGFOE59vtF6iDeck?usp=drive_link) and download them to ```Dockerfile/GATSegDiff/model```.
-
-The data split file for the reannotated subset of the LiVS dataset can also be found at [this link](https://drive.google.com/drive/folders/1V9NtZingw9XQmFGbGGFOE59vtF6iDeck?usp=drive_link).
-
-**NOTICE!** We do not recommend using the released model weights to directly evaluate on the original LiVS dataset, because the released weights were trained on the reannotated LiVS subset, whose annotation style differs from that of the original LiVS dataset.
 
 ## Citation
 If you use this work, please cite:
