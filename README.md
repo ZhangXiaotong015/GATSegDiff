@@ -7,6 +7,7 @@ You can simply build the inference image in a WSL2 environment using the Dockerf
 ```
 cd Dockerfile/GATSegDiff
 docker build -t gat_seg_diff:latest .
+## In the run.sh, replace the src path in '--mount type=bind,src=/mnt/e/WSL/TestData/LiverVesselSeg/Pre-ablation/Portal,dst=/data_test_CT,readonly \' with your own data path.
 bash run.sh
 ```
 For quick experimentation, we have released the model weights trained on the [reannotated subset](data%20processing/Exp_vessel_mask_reannotate_nii/) of the LiVS dataset.
