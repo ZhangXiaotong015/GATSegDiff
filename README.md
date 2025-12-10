@@ -2,8 +2,8 @@
 The official implementation of [Continuous and complete liver vessel segmentation with graph-attention guided diffusion](https://www.sciencedirect.com/science/article/pii/S0950705125017253) published in *Knowledge-Based Systems*.
 
 ## Dockerfile
-You can simply build the inference image in a WSL2 environment using the Dockerfile in [Dockerfile/GATSegDiff](Dockerfile/GATSegDiff/)
-.
+You can simply build the inference image in a WSL2 environment using the Dockerfile in [Dockerfile/GATSegDiff](Dockerfile/GATSegDiff/).
+The Dockerfile in [Dockerfile/GATSegDiff](Dockerfile/GATSegDiff/) uses Torch 1.13.1 and CUDA 11.6.
 ```
 cd Dockerfile/GATSegDiff
 docker build -t gat_seg_diff:latest .
