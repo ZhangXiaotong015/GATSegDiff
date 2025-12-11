@@ -23,6 +23,17 @@ For the complete workflow, the input is a liver-masked CT volume cropped to the 
 
 **NOTICE!** We do not recommend using the released model weights to directly evaluate on the original LiVS dataset, because the released weights were trained on the reannotated LiVS subset, whose annotation style differs from that of the original LiVS dataset.
 
+## Apptainer/Singularity container system
+If you have a Docker image built as mentioned above, you can save the Docker image to a ```.tar``` file and convert it to a ```SIF``` file, which is compatible with Apptainer.
+```
+docker save -o gat_seg_diff_cuda121.tar gat_seg_diff:cuda121
+```
+You can use the bash file in [Apptainer](Apptainer/) to run the inference. 
+```
+cd Apptainer
+bash bash_GATSegDiff.sh
+```
+
 ## Data preparation
 ```
 from data_processing import sub_volume_crop_LiVS, crop25d_testset_LiVS, save_graph3D_25DTrainSet_LiVS
