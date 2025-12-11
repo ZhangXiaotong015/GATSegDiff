@@ -3,7 +3,10 @@ The official implementation of [Continuous and complete liver vessel segmentatio
 
 ## Dockerfile
 You can simply build the inference image in a WSL2 environment using the Dockerfile in [Dockerfile/GATSegDiff](Dockerfile/GATSegDiff/).
+
 The Dockerfile in [Dockerfile/GATSegDiff](Dockerfile/GATSegDiff/) uses Torch 1.13.1 and CUDA 11.6.
+
+If you need the Torch 2.x version, please find the Dockerfile in [Dockerfile_torch230_cu121/GATSegDiff](Dockerfile_torch230_cu121/GATSegDiff/).
 ```
 cd Dockerfile/GATSegDiff
 docker build -t gat_seg_diff:latest .
