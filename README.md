@@ -23,6 +23,11 @@ For the complete workflow, the input is a liver-masked CT volume cropped to the 
 
 **NOTICE!** We do not recommend using the released model weights to directly evaluate on the original LiVS dataset, because the released weights were trained on the reannotated LiVS subset, whose annotation style differs from that of the original LiVS dataset.
 
+Contents of the output folder:
+/ensemble_x: Inference results from the x-th ensemble run.
+ensembled_pred_sample_xxxxxxx.nii.gz: Inference results after ensembling.
+noiseCancelConnect_pred_sample_xxxxxxx.nii.gz: Ensembled inference results after noise cancellation.
+
 ## Apptainer/Singularity container system
 If you have a Docker image built as mentioned above, you can save the Docker image to a ```.tar``` file and convert it to a ```SIF``` file, which is compatible with Apptainer.
 ```
